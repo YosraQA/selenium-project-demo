@@ -6,7 +6,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.e2etests.automation.utility.ConfigFileReader;
-import com.e2etests.automation.utility.Setup;
+import com.e2etests.automation.utility.Setup; 
 
 public class AuthenticationPage {
 	private ConfigFileReader configFileReader;
@@ -23,6 +23,11 @@ public class AuthenticationPage {
 	
 	@FindBy(how = How.ID, using = "welcome")
 	public static WebElement homePage;
+	
+	@FindBy(how = How.XPATH, using ="//*[contains(text(),'Logout')]")
+	// "//*[@id='welcome-menu']/ul/li[3]/a"
+	public static WebElement btnLogout;
+	
 
 	public AuthenticationPage() {
 		PageFactory.initElements(Setup.driver, this);
@@ -45,6 +50,14 @@ public class AuthenticationPage {
 	public void goToURL() {
 		Setup.driver.get(configFileReader.getProperties("home.url"));
 
+	}
+	
+	public void clickOnIconLogout() {
+		homePage.click();
+	}
+	
+	public void clickOnbtnLogout() {
+		btnLogout.click();
 	}
 
 }
