@@ -1,8 +1,13 @@
 package com.e2etests.automation.step_definitions;
 
+import java.time.Duration;
+
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.e2etests.automation.page_objects.AuthenticationPage;
+import com.e2etests.automation.utility.Setup;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -51,7 +56,8 @@ public class AuthenticationStepDefinition {
 
 	@When("Je clique sur le bouton logout")
 	public void jeCliqueSurLeBoutonLogout() throws InterruptedException {
-		Thread.sleep(2000);
+		WebDriverWait wait = new WebDriverWait(Setup.driver,Duration.ofSeconds(5));
+		AuthenticationPage.btnLogout = wait.until(ExpectedConditions.visibilityOf(AuthenticationPage.btnLogout));
 		authenticationPage.clickOnbtnLogout();		
 	}
 

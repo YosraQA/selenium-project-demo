@@ -38,6 +38,7 @@ public class Setup {
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("['start-maximized']");
 			driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			break;
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", "src/test/resource/driver/win/geckodriver.exe");
