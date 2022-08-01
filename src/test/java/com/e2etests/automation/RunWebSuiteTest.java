@@ -10,7 +10,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @CucumberOptions(
 		features= {"src/test/features"},
 		plugin={"pretty", "html:target/cucumber-report.html"},
-		tags = ("@signInXlsx"),
+		tags = ("@recruitment"),
 		monochrome = true,
 		snippets = CAMELCASE
 		)
