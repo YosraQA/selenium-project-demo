@@ -10,8 +10,8 @@ Feature: Authentification sur l application Zara
     When Je saisis l adresse mail "<email>"
     And Je saisis le mot de passe de l utilisateur "<password>"
     And Je clique sur se connecter
-    #Then Je me redirige vers mon compte zara "sameh"
 
+    #Then Je me redirige vers mon compte zara "sameh"
     Examples: 
       | email                    | password    |
       | samehaouichaoui@yahoo.fr | samah2020AB |
