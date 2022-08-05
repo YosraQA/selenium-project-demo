@@ -74,23 +74,20 @@ public class JobStepDefinition {
 		
 
 		@When("Je clique sur la case a cocher qui correspond au metier qu souhaite supprimer {string}")
-		public void jeCliqueSurLaCaseACocherQuiCorrespondAuMetierQuSouhaiteSupprimer(String job_ToBeDeleted) throws InterruptedException {
-			Thread.sleep(5000);
+		public void jeCliqueSurLaCaseACocherQuiCorrespondAuMetierQuSouhaiteSupprimer(String job_ToBeDeleted) {
 			jobPage.clickOnJobToDelete(job_ToBeDeleted);
 			
 		    
 		}
 		
 		@When("Je clique sur le bouton Delete")
-		public void jeCliqueSurLeBoutonDelete() throws InterruptedException {
+		public void jeCliqueSurLeBoutonDelete() {
 			jobPage.clickOnBtnDelete();
-			Thread.sleep(3000);
 		}
 		
 		@When("Je confirme la suppression du metier par un simple clic sur le bouton OK qui s affiche dans le boite de dialogue")
 		public void jeConfirmeLaSuppressionDuMetierParUnSimpleClicSurLeBoutonOKQuiSAfficheDansLeBoiteDeDialogue() throws InterruptedException {
 			jobPage.clickOnOKDialog();
-			Thread.sleep(3000);
 		}
 		
 		@Then("Je verifie que le metier a ete bien supprime du tableau {string}")
