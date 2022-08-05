@@ -106,9 +106,9 @@ public class JobPage {
 
 	public void clickOnJobToDelete(String job_To_Delete) {
 
-		for (int i = 1; i <= rows.size() - 1; i++) {
-			if (rows.get(i).getText().equalsIgnoreCase(job_To_Delete)) {
-				execute.executeScript("arguments[0].click();", List_chekboxes.get(i - 1));
+		for (int i = 1; i < rows.size()-1; i++) {
+			if (rows.get(i).getText().contains(job_To_Delete)) {
+				execute.executeScript("arguments[0].click();", List_chekboxes.get(i-1));
 			}
 
 		}

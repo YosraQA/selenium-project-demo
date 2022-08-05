@@ -75,8 +75,9 @@ public class JobStepDefinition {
 
 		@When("Je clique sur la case a cocher qui correspond au metier qu souhaite supprimer {string}")
 		public void jeCliqueSurLaCaseACocherQuiCorrespondAuMetierQuSouhaiteSupprimer(String job_ToBeDeleted) throws InterruptedException {
-			jobPage.clickOnJobToDelete(job_ToBeDeleted);
 			Thread.sleep(5000);
+			jobPage.clickOnJobToDelete(job_ToBeDeleted);
+			
 		    
 		}
 		
@@ -93,9 +94,9 @@ public class JobStepDefinition {
 		}
 		
 		@Then("Je verifie que le metier a ete bien supprime du tableau {string}")
-		public void jeVerifieQueLeMetierAEteBienSupprimeDuTableau(String jobToDelete_txt) {
+		public void jeVerifieQueLeMetierAEteBienSupprimeDuTableau(String jobToDelete) {
 			String result = JobPage.resultTable.getText();
-			Assert.assertFalse(result.contains(jobToDelete_txt));
+			Assert.assertFalse(result.contains(jobToDelete));
 			System.out.println("The selected job has been successfully deleted");
 		}
 
