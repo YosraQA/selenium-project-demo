@@ -14,11 +14,6 @@ public class JobStepDefinition {
 			this.jobPage = new JobPage();
 		}
 
-//		@When("Je clique sur le bouton admin")
-//		public void jeCliqueSurLeBoutonAdmin() {
-//			jobPage.clickOnBtnAdmin();
-//		}
-
 		@When("Je clique sur le bouton job")
 		public void jeCliqueSurLeBoutonJob() {
 			jobPage.clickOnBtnJob();
@@ -76,8 +71,6 @@ public class JobStepDefinition {
 		@When("Je clique sur la case a cocher qui correspond au metier qu souhaite supprimer {string}")
 		public void jeCliqueSurLaCaseACocherQuiCorrespondAuMetierQuSouhaiteSupprimer(String job_ToBeDeleted) {
 			jobPage.clickOnJobToDelete(job_ToBeDeleted);
-			
-		    
 		}
 		
 		@When("Je clique sur le bouton Delete")

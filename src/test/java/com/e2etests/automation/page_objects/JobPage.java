@@ -52,9 +52,6 @@ public class JobPage {
 	@FindBy(how = How.ID, using = "dialogDeleteBtn")
 	public static WebElement btnOKDialog;
 
-	@FindBy(how = How.ID, using = "successBodyDelete")
-	public static WebElement mesgConfir;
-
 	@FindBy(how = How.XPATH, using = "//input[@name='chkSelectRow[]']")
 	public static List<WebElement> List_chekboxes;
 

@@ -34,6 +34,6 @@ Feature: Ajout d une metier
     Then Je verifie que le metier a ete bien supprime du tableau "<job_To_Delete>"
 
     Examples: 
-      | job_To_Delete        |
-      | BTest                |
-      | VP - Client Services |
+      | job_To_Delete   |
+      | Finance Manager |
+      | Head of Support |
